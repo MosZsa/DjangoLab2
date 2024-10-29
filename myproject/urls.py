@@ -19,10 +19,9 @@ from django.urls import path
 from myapp import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact'),
-    path('templates/<str:param>/', views.PageO, name='Page1'),
-    path('templates/<str:param1>/<str:param2>/', views.PageT, name='Page2'),
+    path('page1/<str:param>/', views.page1, name='page1'),
+    path('page2/<str:param1>/<str:param2>/', views.page2, name='page2'),
 ]
